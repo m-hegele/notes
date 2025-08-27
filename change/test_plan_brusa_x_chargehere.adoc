@@ -1,0 +1,116 @@
+= Test Plan: Brusa AWC x ChargeControl
+:toc:
+
+[cols="1,1,1", options="header"]
+|===
+| Action
+| Expected Result on AWC
+| Expected Result on ChargeControl
+| Status (Pass / Fail)
+
+| Connect AWC & ChargeControl
+a|
+* Boot Notification accepted
+* TxDefaultProfile received
+a|
+* Boot Notification received
+* Configuration is synchronized
+* Charger is configured (Config-Tool)
+* Charger shown with Status Available in monitoring
+|
+
+| Set available capacity to 0 kW in ChargeControl
+|
+| Capacity shown with 0 kW in monitoring
+|
+
+| Vehicle arrives
+|
+| Status changes to Preparing (= translation of Occupied in OCPP 2.0.1) in monitoring
+|
+
+| Start a transaction (if this can be separated from step above)
+a|
+* TransactionEvent request is accepted
+* Receives SetChargingProfile Request with 0 kW
+* Vehicle does not charge
+a|
+* Receives TransactionEvent with reason ChargingStateChanged and ChargingState = SuspendedEVSE
+* Status changes to SuspendedEVSE in monitoring
+* Sampled Meter Values are received: session energy is 0 Wh, currents are 0 A in monitoring
+* Active transaction is shown in monitoring
+|
+
+| Increase capacity to 5 kW in ChargeControl
+a|
+* Receives SetChargingProfile with 5 kW
+* Vehicle charges with ~ 5 kW
+a|
+* Status changes to Charging in monitoring
+* Power consumption is ~ 5 kW in monitoring
+|
+
+| Increase capacity to 11 kW in ChargeControl
+a|
+* Receives SetChargingProfile with 11 kW
+* Vehicle charges with ~ 11 kW
+a|
+* Power consumption is ~ 11 kW in monitoring
+|
+
+| Set capacity to 0 kW in ChargeControl
+a|
+* Receives SetChargingProfile with 0 kW
+* Vehicle stops charging
+a|
+* Status changes to SuspendedEVSE in monitoring
+* No power consumption in monitoring
+|
+
+| Set capacity back to 11 kW in ChargeControl
+a|
+* Receives SetChargingProfile with 11 kW
+* Vehicle starts charging again
+a|
+* Status switches back to Charging in monitoring
+* Power consumption is ~ 11 kW in monitoring
+|
+
+| Simulate full vehicle: stop charging on vehicle side
+a|
+* Vehicle stops charging
+* Receives SetChargingProfile with 5.52 kW (= 8A)
+a|
+* Receives TransactionEvent with reason ChargingStateChanged and ChargingState = SuspendedEV
+* Status switches to SuspendedEV in monitoring
+* No power consumption in monitoring
+|
+
+| Start charging again on vehicle side
+a|
+* Vehicle resumes charging
+* Receives SetChargingProfile with 11 kW
+a|
+* Receives TransactionEvent with reason ChargingStateChanged and ChargingState = Charging
+* Status switches to Charging in monitoring
+* Power consumption is ~ 11 kW in monitoring
+|
+
+| Stop Transaction (if this can be separated from step below)
+a|
+* Stop Transaction request is accepted
+* Vehicle stops charging
+a|
+* Receives Stop TransactionEvent
+* Status switches to Preparing (= OCPP 2.0.1 translation of Occupied) in monitoring
+* Power consumption is 0 kW in monitoring
+|
+
+| Vehicle departs
+a|
+a|
+* Receives StatusNotification with Status = Available
+* Status switches to Available in monitoring
+|
+
+|===
