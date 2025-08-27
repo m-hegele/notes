@@ -1,0 +1,33 @@
+Scenarios:
+
+- [x] 1 A gap 
+  - fix: properly updating rcur_measured only if currents are 'measured'
+  - (slope prediction irrelevant)
+  - scenarios
+    - dynamic_capacity_groups
+    - nightly_sleep
+    - nissan_leaf
+    - sequential
+    - sequential_three
+
+- oscillations: drift in stable cur too often on Nissan Leaf
+  - can't learn deviations that are symatically > 0.2 ?
+  - always resetting all 'except' the last measured
+
+- full_ev: constantly in prepare-charging
+- phase forgetting: short bursts on L2, L3 (inactive)
+  - nightly_sleep 
+  - perfect_with_lag
+
+
+boring scenarios:
+- mini
+- kona_cv_cont
+- perfect3_cv_10A
+- perfect3_cv_cont
+- rcur_sym_opt: even with sym
+- vw_egolf_cv_8A
+- vw_id3_cv_5A
+
+not full:
+- sus_ev_problem
