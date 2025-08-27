@@ -1,13 +1,18 @@
 = Test Plan: Brusa AWC x ChargeControl
-:toc:
+Marius Hegele, <m.hegele@chargehere.de>
+1.0, 8-27-2025
 
-[cols="1,1,1", options="header"]
+:counter: 0
+
+[cols="1,4,6,6,2", options="header"]
 |===
+| #
 | Action
 | Expected Result on AWC
 | Expected Result on ChargeControl
 | Status (Pass / Fail)
 
+| {counter:count}
 | Connect AWC & ChargeControl
 a|
 * Boot Notification accepted
@@ -19,16 +24,21 @@ a|
 * Charger shown with Status Available in monitoring
 |
 
+| {counter:count}
 | Set available capacity to 0 kW in ChargeControl
-|
-| Capacity shown with 0 kW in monitoring
+a|
+a|
+* Capacity shown with 0 kW in monitoring
 |
 
+| {counter:count}
 | Vehicle arrives
-|
-| Status changes to Preparing (= translation of Occupied in OCPP 2.0.1) in monitoring
+a|
+a|
+* Status changes to Preparing (= translation of Occupied in OCPP 2.0.1) in monitoring
 |
 
+| {counter:count}
 | Start a transaction (if this can be separated from step above)
 a|
 * TransactionEvent request is accepted
@@ -41,6 +51,7 @@ a|
 * Active transaction is shown in monitoring
 |
 
+| {counter:count}
 | Increase capacity to 5 kW in ChargeControl
 a|
 * Receives SetChargingProfile with 5 kW
@@ -50,6 +61,7 @@ a|
 * Power consumption is ~ 5 kW in monitoring
 |
 
+| {counter:count}
 | Increase capacity to 11 kW in ChargeControl
 a|
 * Receives SetChargingProfile with 11 kW
@@ -58,6 +70,7 @@ a|
 * Power consumption is ~ 11 kW in monitoring
 |
 
+| {counter:count}
 | Set capacity to 0 kW in ChargeControl
 a|
 * Receives SetChargingProfile with 0 kW
@@ -67,6 +80,7 @@ a|
 * No power consumption in monitoring
 |
 
+| {counter:count}
 | Set capacity back to 11 kW in ChargeControl
 a|
 * Receives SetChargingProfile with 11 kW
@@ -76,6 +90,7 @@ a|
 * Power consumption is ~ 11 kW in monitoring
 |
 
+| {counter:count}
 | Simulate full vehicle: stop charging on vehicle side
 a|
 * Vehicle stops charging
@@ -86,6 +101,7 @@ a|
 * No power consumption in monitoring
 |
 
+| {counter:count}
 | Start charging again on vehicle side
 a|
 * Vehicle resumes charging
@@ -96,6 +112,7 @@ a|
 * Power consumption is ~ 11 kW in monitoring
 |
 
+| {counter:count}
 | Stop Transaction (if this can be separated from step below)
 a|
 * Stop Transaction request is accepted
@@ -106,6 +123,7 @@ a|
 * Power consumption is 0 kW in monitoring
 |
 
+| {counter:count}
 | Vehicle departs
 a|
 a|
