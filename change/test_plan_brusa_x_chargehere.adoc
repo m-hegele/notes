@@ -22,21 +22,21 @@ a|
 * Configuration is synchronized
 * Charger is configured (Config-Tool)
 * Charger shown with Status Available in monitoring
-|
+| pass
 
 | {counter:count}
 | Set available capacity to 0 kW in ChargeControl
 a|
 a|
 * Capacity shown with 0 kW in monitoring
-|
+| pass
 
 | {counter:count}
 | Vehicle arrives
 a|
 a|
 * Status changes to Preparing (= translation of Occupied in OCPP 2.0.1) in monitoring
-|
+| 
 
 | {counter:count}
 | Start a transaction (if this can be separated from step above)

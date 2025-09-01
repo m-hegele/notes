@@ -1,0 +1,62 @@
+[
+  {
+    "sampled_value": [
+      {
+        "value": 2114135.6,
+        "context": "Transaction.Begin",
+        "measurand": "Energy.Active.Import.Register",
+        "location": "Outlet",
+        "unit_of_measure": {
+          "unit": "Wh",
+          "multiplier": 0
+        }
+      }
+    ],
+    "timestamp": "2025-08-21T07: 03: 36.481+0000"
+  },
+  {
+    "sampled_value": [
+      {
+        "value": 2133854.3,
+        "context": "Transaction.End",
+        "measurand": "Energy.Active.Import.Register",
+        "location": "Outlet",
+        "unit_of_measure": {
+          "unit": "Wh",
+          "multiplier": 0
+        }
+      }
+    ],
+    "timestamp": "2025-08-21T13:34:41.364+0000"
+  },
+  {
+    "sampled_value": [
+      {
+        "value": 2114.1356,
+        "context": "Transaction.Begin",
+        "signed_meter_value": {
+          "signed_meter_data": "T0NNRnx7IkZWIjoiMS4xIiwiR0kiOiJLRUJBX0tDUDMwIiwiR1MiOiIyODg4MTYyOCIsIkdWIjoiMi45LjIiLCJQRyI6IlQxMjUiLCJJUyI6dHJ1ZSwiSUwiOiJUUlVTVEVEIiwiSUYiOlsiUkZJRF9QTEFJTiIsIk9DUFBfQ0FDSEUiLCJJU08xNTExOF9OT05FIiwiUExNTl9OT05FIl0sIklUIjoiSVNPMTQ0NDMiLCJJRCI6IjNBNUFBODc2IiwiUkQiOlt7IlRNIjoiMjAyNS0wOC0yMVQwNzowMzozNiwwMDArMDAwMCBJIiwiVFgiOiJCIiwiRUYiOiIiLCJTVCI6IkciLCJSViI6MjExNC4xMzU2LCJSSSI6IjEtYjoxLjguMCIsIlJVIjoia1doIn0seyJUTSI6IjIwMjUtMDgtMjFUMTM6MzQ6NDEsMDAwKzAwMDAgSSIsIlRYIjoiRSIsIkVGIjoiIiwiU1QiOiJHIiwiUlYiOjIxMzMuODU0MywiUkkiOiIxLWI6MS44LjAiLCJSVSI6ImtXaCJ9XX18eyJTRCI6IjMwNDYwMjIxMDBEQjM2QUNFNEQ5OEFENEM5NzFDNkRDQUQzNDU0MzNDN0JDOURGNDVGMDc0RkVCQUI5OTNBRjgzNDU4NkQxMUE3MDIyMTAwQkNGQjRDRERENzkyOTVGMUI1MjQ3QzAwRjc2NTg4OEE5RDkzQ0FDMDQ4RUI2NjQxRTQ5NzU0M0NBQjI5NUMxMSJ9",
+          "signing_method": "ECC256",
+          "encoding_method": "OCMF",
+          "public_key": "eyJVSyI6IjMwNTkzMDEzMDYwNzJBODY0OENFM0QwMjAxMDYwODJBODY0OENFM0QwMzAxMDcwMzQyMDAwNDYwNkE0NDdDQUZFREZCMkQ1RUUyMTE2MDYwN0M4NEY4NEUxRjMzMjJGNkRDMTJGOEFBMjgzMzVEOEUxQTVGMkRGMzQ4NzYyQjA5QUFEQzcwNTVFM0U1MUJGQjM3RUU5MjJCRUE2NUMwNEQyNTNCNDZCRkQ5RjQ0NjlGRTA4MUQ1In0="
+        }
+      }
+    ],
+    "timestamp": "2025-08-21T07:03:36.000+0000"
+  },
+  {
+    "sampled_value": [
+      {
+        "value": 2133.8543,
+        "context": "Transaction.End",
+        "signed_meter_value": {
+          "signed_meter_data": "T0NNRnx7IkZWIjoiMS4xIiwiR0kiOiJLRUJBX0tDUDMwIiwiR1MiOiIyODg4MTYyOCIsIkdWIjoiMi45LjIiLCJQRyI6IlQxMjUiLCJJUyI6dHJ1ZSwiSUwiOiJUUlVTVEVEIiwiSUYiOlsiUkZJRF9QTEFJTiIsIk9DUFBfQ0FDSEUiLCJJU08xNTExOF9OT05FIiwiUExNTl9OT05FIl0sIklUIjoiSVNPMTQ0NDMiLCJJRCI6IjNBNUFBODc2IiwiUkQiOlt7IlRNIjoiMjAyNS0wOC0yMVQwNzowMzozNiwwMDArMDAwMCBJIiwiVFgiOiJCIiwiRUYiOiIiLCJTVCI6IkciLCJSViI6MjExNC4xMzU2LCJSSSI6IjEtYjoxLjguMCIsIlJVIjoia1doIn0seyJUTSI6IjIwMjUtMDgtMjFUMTM6MzQ6NDEsMDAwKzAwMDAgSSIsIlRYIjoiRSIsIkVGIjoiIiwiU1QiOiJHIiwiUlYiOjIxMzMuODU0MywiUkkiOiIxLWI6MS44LjAiLCJSVSI6ImtXaCJ9XX18eyJTRCI6IjMwNDYwMjIxMDBEQjM2QUNFNEQ5OEFENEM5NzFDNkRDQUQzNDU0MzNDN0JDOURGNDVGMDc0RkVCQUI5OTNBRjgzNDU4NkQxMUE3MDIyMTAwQkNGQjRDRERENzkyOTVGMUI1MjQ3QzAwRjc2NTg4OEE5RDkzQ0FDMDQ4RUI2NjQxRTQ5NzU0M0NBQjI5NUMxMSJ9",
+          "signing_method": "ECC256",
+          "encoding_method": "OCMF",
+          "public_key": "eyJVSyI6IjMwNTkzMDEzMDYwNzJBODY0OENFM0QwMjAxMDYwODJBODY0OENFM0QwMzAxMDcwMzQyMDAwNDYwNkE0NDdDQUZFREZCMkQ1RUUyMTE2MDYwN0M4NEY4NEUxRjMzMjJGNkRDMTJGOEFBMjgzMzVEOEUxQTVGMkRGMzQ4NzYyQjA5QUFEQzcwNTVFM0U1MUJGQjM3RUU5MjJCRUE2NUMwNEQyNTNCNDZCRkQ5RjQ0NjlGRTA4MUQ1In0="
+        }
+      }
+    ],
+    "timestamp": "2025-08-21T13:34:41.000+0000"
+  }
+]
