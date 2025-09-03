@@ -22,14 +22,14 @@ a|
 * Configuration is synchronized
 * Charger is configured (Config-Tool)
 * Charger shown with Status Available in monitoring
-| pass
+| x
 
 | {counter:count}
 | Set available capacity to 0 kW in ChargeControl
 a|
 a|
 * Capacity shown with 0 kW in monitoring
-| pass
+| x
 
 | {counter:count}
 | Vehicle arrives
