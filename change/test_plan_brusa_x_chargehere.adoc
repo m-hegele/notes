@@ -16,20 +16,20 @@ Marius Hegele, <m.hegele@chargehere.de>
 | Connect AWC & ChargeControl
 a|
 * Boot Notification accepted
-* TxDefaultProfile received
+* TxDefaultProfile with 690 W received
 a|
 * Boot Notification received
 * Configuration is synchronized
 * Charger is configured (Config-Tool)
 * Charger shown with Status Available in monitoring
-| x
+| 
 
 | {counter:count}
 | Set available capacity to 0 kW in ChargeControl
 a|
 a|
 * Capacity shown with 0 kW in monitoring
-| x
+|
 
 | {counter:count}
 | Vehicle arrives
@@ -42,12 +42,12 @@ a|
 | Start a transaction (if this can be separated from step above)
 a|
 * TransactionEvent request is accepted
-* Receives SetChargingProfile Request with 0 kW
+* Receives SetChargingProfile Request with 690 W
 * Vehicle does not charge
 a|
-* Receives TransactionEvent with reason ChargingStateChanged and ChargingState = SuspendedEVSE
-* Status changes to SuspendedEVSE in monitoring
-* Sampled Meter Values are received: session energy is 0 Wh, currents are 0 A in monitoring
+* Receives TransactionEvent with reason ChargingStateChanged and ChargingState = Charging (minimum current of 690 W applies)
+* Status changes to Charging in monitoring
+* Sampled Meter Values are received: session energy increases, currents are 1 A per phase in monitoring
 * Active transaction is shown in monitoring
 |
 
@@ -94,7 +94,7 @@ a|
 | Simulate full vehicle: stop charging on vehicle side
 a|
 * Vehicle stops charging
-* Receives SetChargingProfile with 5.52 kW (= 8A)
+* Receives SetChargingProfile with 4.14 kW (= 6A suspended current)
 a|
 * Receives TransactionEvent with reason ChargingStateChanged and ChargingState = SuspendedEV
 * Status switches to SuspendedEV in monitoring
